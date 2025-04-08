@@ -17,12 +17,14 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-agro-green-dark font-heading font-bold text-xl md:text-2xl">
-                AgroVista Digital
-              </span>
+              <img 
+                src="/lovable-uploads/9b2f4d96-0daa-4402-8dc2-f3cb9d047844.png" 
+                alt="CMP AGRO Logo" 
+                className="h-16 mr-2" 
+              />
             </Link>
           </div>
           
@@ -32,7 +34,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-700 hover:text-agro-green font-medium transition-colors duration-300"
+                className="text-gray-700 hover:text-cmp-red font-medium transition-colors duration-300"
               >
                 {item.name}
               </Link>
@@ -43,7 +45,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button 
               type="button" 
-              className="text-gray-700 hover:text-agro-green"
+              className="text-gray-700 hover:text-cmp-red"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -64,7 +66,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-agro-green hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cmp-red hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

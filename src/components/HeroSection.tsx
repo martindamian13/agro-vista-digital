@@ -18,17 +18,17 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-24 md:py-32 lg:py-40 relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Soluciones de calidad para el sector agropecuario
+            CMP AGRO - Soluciones para el campo
           </h1>
           <p className="text-xl text-gray-200 mb-8">
             Distribución de productos y servicios especializados para 
             agricultores y ganaderos, con un compromiso con la calidad y el medio ambiente.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/productos" className="btn-primary text-center">
+            <Link to="/productos" className="bg-cmp-red hover:bg-cmp-red/90 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300 text-center">
               Ver productos
             </Link>
-            <Link to="/contacto" className="bg-white text-agro-green hover:bg-gray-100 font-medium px-6 py-3 rounded-md transition-colors duration-300 text-center">
+            <Link to="/contacto" className="bg-cmp-blue text-white hover:bg-cmp-blue/90 font-medium px-6 py-3 rounded-md transition-colors duration-300 text-center">
               Contactar ahora
             </Link>
           </div>

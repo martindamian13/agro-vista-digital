@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 115 24% 38%;
+    --primary: 142 59% 33%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -25,15 +25,15 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 30 35% 40%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 47 95% 60%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 115 24% 38%;
+    --ring: 142 59% 33%;
 
     --radius: 0.5rem;
   }
@@ -57,19 +57,19 @@
   }
   
   .btn-primary {
-    @apply bg-agro-green hover:bg-agro-green-dark text-white font-medium px-6 py-3 rounded-md transition-colors duration-300;
+    @apply bg-cmp-green hover:bg-cmp-green/90 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300;
   }
   
   .btn-secondary {
-    @apply bg-agro-earth hover:bg-agro-earth-dark text-white font-medium px-6 py-3 rounded-md transition-colors duration-300;
+    @apply bg-cmp-blue hover:bg-cmp-blue/90 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300;
   }
   
   .btn-outline {
-    @apply border border-agro-green text-agro-green hover:bg-agro-green hover:text-white font-medium px-6 py-3 rounded-md transition-colors duration-300;
+    @apply border border-cmp-green text-cmp-green hover:bg-cmp-green hover:text-white font-medium px-6 py-3 rounded-md transition-colors duration-300;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-agro-green-dark;
+    @apply text-3xl md:text-4xl font-bold mb-8 text-cmp-blue;
   }
   
   .card-hover {

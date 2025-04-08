@@ -29,6 +29,20 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				cmp: {
+					red: '#EA384C',
+					blue: '#004C97',
+					green: {
+						light: '#7ED957',
+						DEFAULT: '#4CAF50',
+						dark: '#2E7D32',
+					},
+					yellow: {
+						light: '#FFEB3B',
+						DEFAULT: '#FFC107',
+						dark: '#FF8F00',
+					}
+				},
 				agro: {
 					green: {
 						light: '#6A994E',
