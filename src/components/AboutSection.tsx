@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   const features = [
-    'Más de 20 años de experiencia en el sector',
-    'Productos de la más alta calidad',
-    'Asesoramiento técnico especializado',
-    'Entregas rápidas y puntuales',
-    'Compromiso con la sostenibilidad',
-    'Servicio post-venta garantizado',
+    'Soluciones innovadoras y tecnológicas',
+    'Marcas internacionales cuidadosamente seleccionadas',
+    'Amplio portafolio de productos de primer nivel',
+    'Asesoramiento técnico personalizado',
+    'Productos adaptados a las necesidades del cliente',
+    'Compromiso con el Agronegocio paraguayo',
   ];
 
   return (
@@ -19,10 +19,10 @@ const AboutSection = () => {
           <div className="rounded-lg overflow-hidden relative">
             <img 
               src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?ixlib=rb-4.0.3" 
-              alt="Equipo de AgroVista Digital"
+              alt="Equipo de CMP AGRO"
               className="w-full h-auto object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-agro-green-dark/80 to-transparent p-6">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cmp-green/80 to-transparent p-6">
               <span className="text-white font-medium text-lg">Compromiso con el campo</span>
             </div>
           </div>
@@ -31,21 +31,24 @@ const AboutSection = () => {
         <div>
           <h2 className="section-title">Sobre Nosotros</h2>
           <p className="text-gray-600 mb-6">
-            En <span className="font-semibold text-agro-green-dark">AgroVista Digital</span>, somos 
-            una empresa familiar con más de 20 años de experiencia en la distribución 
-            de productos para el sector agropecuario y ganadero.
+            Somos una empresa líder que tiene como objetivo dar soluciones innovadoras y 
+            tecnológicas al Agronegocio del Paraguay. 🇵🇾
           </p>
           <p className="text-gray-600 mb-6">
-            Nuestro compromiso es ofrecer soluciones de calidad que ayuden a mejorar 
-            la productividad y rentabilidad de nuestros clientes, siempre respetando 
-            el medio ambiente y promoviendo prácticas sostenibles.
+            Seleccionamos cuidadosamente las marcas internacionales que representamos. 
+            Esto con el objetivo de ofrecer un amplio portafolio de productos de primer nivel.
+          </p>
+          <p className="text-gray-600 mb-6">
+            Nuestros técnicos están siempre disponibles para brindar asesoramiento 
+            personalizado y garantizar a los clientes, productos y soluciones de 
+            acuerdo a sus necesidades.
           </p>
           
           <ul className="space-y-3 mb-8">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-agro-green-light/20 flex items-center justify-center mr-3">
-                  <Check className="h-4 w-4 text-agro-green" />
+                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-cmp-green-light/20 flex items-center justify-center mr-3">
+                  <Check className="h-4 w-4 text-cmp-green" />
                 </div>
                 <span className="text-gray-700">{feature}</span>
               </li>
