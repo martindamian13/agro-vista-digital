@@ -18,7 +18,7 @@ const AboutSection = () => {
         <div>
           <div className="rounded-lg overflow-hidden relative">
             <img 
-              src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?ixlib=rb-4.0.3" 
+              src="https://www.cmpproductos.com.py//wp-content//uploads//2024//06//WhatsApp-Image-2024-06-06-at-14.32.04-1.jpeg" 
               alt="Equipo de CMP AGRO"
               className="w-full h-auto object-cover"
             />
