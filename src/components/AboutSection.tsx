@@ -1,6 +1,7 @@
 
 import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const AboutSection = () => {
   const features = [
@@ -15,16 +16,18 @@ const AboutSection = () => {
   return (
     <section className="container-section">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="rounded-lg overflow-hidden relative">
-            <img 
-              src="https://www.cmpproductos.com.py//wp-content//uploads//2024//06//WhatsApp-Image-2024-06-06-at-14.32.04-1.jpeg" 
-              alt="Equipo de CMP AGRO"
-              className="w-full h-auto object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cmp-green/80 to-transparent p-6">
-              <span className="text-white font-medium text-lg">Compromiso con el campo</span>
-            </div>
+        <div className="flex justify-center">
+          <div className="rounded-lg overflow-hidden relative w-3/4 mx-auto">
+            <AspectRatio ratio={4/3} className="bg-muted">
+              <img 
+                src="https://www.cmpproductos.com.py//wp-content//uploads//2024//06//WhatsApp-Image-2024-06-06-at-14.32.04-1.jpeg" 
+                alt="Equipo de CMP AGRO"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cmp-green/80 to-transparent p-6">
+                <span className="text-white font-medium text-lg">Compromiso con el campo</span>
+              </div>
+            </AspectRatio>
           </div>
         </div>
         
