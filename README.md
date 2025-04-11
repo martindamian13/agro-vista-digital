@@ -1,3 +1,62 @@
+# TODO 
+# 🧩 Proyecto Web - Lista de Tareas Pendientes
+
+Este documento detalla los puntos tratados en la reunión con el cliente. Se agrupan y ordenan por categoría para facilitar su desarrollo.
+
+---
+
+## 🧱 Estructura y Contenido General
+
+### 1. CMP (Componente Principal)
+- [ ] Añadir detalles informativos.
+- [ ] Incluir imágenes relevantes del CMP.
+- [ ] Incorporar fragmentos de video para mostrar el avance visual.
+- [ ] Agregar video en loop del sector de productos.
+
+### 2. Tablas de Clientes
+- [ ] Implementar **tres tablas** diferenciadas de clientes.
+
+### 3. Segmentación y Categorías
+- [ ] Crear segmentación por **categoría**.
+- [ ] Clasificación de contenido por **sector productivo**.
+- [ ] Asociar:
+  - [ ] Testimonios.
+  - [ ] Contacto directo.
+  - [ ] Orden de asesor.
+
+### 4. Sección de Marcas / Partnerships
+- [ ] Mostrar **marcas de partnership**.
+- [ ] Decidir ubicación: `arriba` o `abajo` del sector de categorías.
+- [ ] Diferenciar visualmente:
+  - [ ] Logos de **marcas de productos**.
+  - [ ] Logos de **marcas de clientes**.
+
+---
+
+## 🧹 Limpieza y Ajustes Visuales
+
+### 5. Eliminación de elementos anteriores
+- [ ] Suprimir la sección **"Contáctenos"**.
+- [ ] Eliminar el **footer** de la página anterior.
+
+---
+
+## 📲 Funcionalidades Adicionales
+
+### 6. Contacto Directo
+- [ ] Integrar globo flotante de **WhatsApp**.
+
+### 7. Tracking y Analytics
+- [ ] Agregar **Meta Pixel** para seguimiento.
+
+---
+
+## ✅ Notas
+- A medida que se completan las tareas, actualizar el estado.
+- Evaluar la prioridad según el flujo general del desarrollo y la presentación final para el cliente.
+
+
+
 # Welcome to your Lovable project
 
 ## Project info
