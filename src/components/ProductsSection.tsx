@@ -1,32 +1,32 @@
 
 import { Link } from 'react-router-dom';
-import { Leaf, Droplet, Tractor, Users, ShoppingBag } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
 
 const ProductsSection = () => {
   const categories = [
     {
-      name: 'Fertilizantes',
-      description: 'Mejore el rendimiento de sus cultivos con nuestros fertilizantes de alta calidad.',
-      icon: <Leaf className="h-10 w-10 text-agro-green" />,
-      link: '/productos#fertilizantes',
+      name: 'Forraje',
+      description: 'Alimentación de alta calidad para todo tipo de ganado, proporcionando los nutrientes esenciales.',
+      image: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '/productos#forraje',
     },
     {
-      name: 'Semillas',
-      description: 'Semillas seleccionadas para garantizar cultivos productivos y resistentes.',
-      icon: <Droplet className="h-10 w-10 text-agro-green" />,
-      link: '/productos#semillas',
+      name: 'Encilaje',
+      description: 'Soluciones para la conservación de forrajes mediante fermentación anaeróbica de alta calidad.',
+      image: 'https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '/productos#encilaje',
     },
     {
-      name: 'Equipamiento',
-      description: 'Maquinaria y herramientas para todas las necesidades de su explotación.',
-      icon: <Tractor className="h-10 w-10 text-agro-green" />,
-      link: '/productos#equipamiento',
+      name: 'Transporte',
+      description: 'Equipamiento especializado para el transporte eficiente de productos agrícolas y ganaderos.',
+      image: 'https://images.unsplash.com/photo-1599171042187-7dbbdba66bbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '/productos#transporte',
     },
     {
-      name: 'Ganadería',
-      description: 'Productos especializados para el cuidado y la alimentación animal.',
-      icon: <Users className="h-10 w-10 text-agro-green" />,
-      link: '/productos#ganaderia',
+      name: 'Almacenamiento',
+      description: 'Sistemas de almacenamiento diseñados para preservar la calidad de sus productos por más tiempo.',
+      image: 'https://images.unsplash.com/photo-1592863576424-faa3419a17bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '/productos#almacenamiento',
     },
   ];
 
@@ -44,22 +44,28 @@ const ProductsSection = () => {
         {categories.map((category) => (
           <div 
             key={category.name} 
-            className="bg-white rounded-lg p-6 shadow-md card-hover flex flex-col"
+            className="bg-white rounded-lg overflow-hidden shadow-md card-hover flex flex-col"
           >
-            <div className="mb-4">
-              {category.icon}
+            <div className="h-48 overflow-hidden">
+              <img 
+                src={category.image} 
+                alt={category.name} 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">{category.name}</h3>
-            <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
-            <Link 
-              to={category.link} 
-              className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center"
-            >
-              Ver productos
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </Link>
+            <div className="p-6 flex flex-col flex-grow">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">{category.name}</h3>
+              <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
+              <Link 
+                to={category.link} 
+                className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center"
+              >
+                Ver productos
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
