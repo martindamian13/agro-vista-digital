@@ -1,31 +1,37 @@
-
 import { Link } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
 
+interface Category {
+  name: string;
+  description: string;
+  image: string; // Cambiado a string para la URL de la imagen
+  link: string;
+}
+
 const ProductsSection = () => {
-  const categories = [
+  const categories: Category[] = [
     {
-      name: 'Forraje',
+      name: 'Forraje: Ensilaje y Transporte',
       description: 'Alimentación de alta calidad para todo tipo de ganado, proporcionando los nutrientes esenciales.',
-      image: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://raw.githubusercontent.com/Andrestorales7/image-assets/refs/heads/main/images/Almacenamiento-Ensilaje-etc/mallas-fardos/Artboard-13-2.jpg',
       link: '/productos#forraje',
     },
     {
-      name: 'Encilaje',
+      name: 'Envases y Contenedores',
       description: 'Soluciones para la conservación de forrajes mediante fermentación anaeróbica de alta calidad.',
-      image: 'https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1675583097478-fc4d6c436890?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: '/productos#encilaje',
     },
     {
-      name: 'Transporte',
+      name: 'Horticultura',
       description: 'Equipamiento especializado para el transporte eficiente de productos agrícolas y ganaderos.',
-      image: 'https://images.unsplash.com/photo-1599171042187-7dbbdba66bbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://raw.githubusercontent.com/Andrestorales7/image-assets/refs/heads/main/images/horticultura/invernaderos/PELICULA-INVERNADERO-AGRINPLEX-CMPAGRO-1.jpg',
       link: '/productos#transporte',
     },
     {
-      name: 'Almacenamiento',
+      name: 'Otros Productos',
       description: 'Sistemas de almacenamiento diseñados para preservar la calidad de sus productos por más tiempo.',
-      image: 'https://images.unsplash.com/photo-1592863576424-faa3419a17bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://raw.githubusercontent.com/Andrestorales7/image-assets/refs/heads/main/images/otros/precintos/precinto-indicativo.jpg',
       link: '/productos#almacenamiento',
     },
   ];
