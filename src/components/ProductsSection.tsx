@@ -7,7 +7,7 @@ interface Category {
   description: string;
   image: string; 
   link: string;
-  productId?: string; // Añadido ID de producto para enlaces directos
+  productId?: string;
 }
 
 const ProductsSection = () => {
@@ -17,7 +17,7 @@ const ProductsSection = () => {
       description: 'Alimentación de alta calidad para todo tipo de ganado, proporcionando los nutrientes esenciales.',
       image: 'https://raw.githubusercontent.com/Andrestorales7/image-assets/refs/heads/main/images/Almacenamiento-Ensilaje-etc/mallas-fardos/Artboard-13-2.jpg',
       link: '/productos#forraje',
-      productId: 'prod-01', // ID para enlace directo al detalle
+      productId: 'prod-01',
     },
     {
       name: 'Envases y Contenedores',
@@ -30,14 +30,14 @@ const ProductsSection = () => {
       name: 'Horticultura',
       description: 'Equipamiento especializado para el transporte eficiente de productos agrícolas y ganaderos.',
       image: 'https://raw.githubusercontent.com/Andrestorales7/image-assets/refs/heads/main/images/horticultura/invernaderos/PELICULA-INVERNADERO-AGRINPLEX-CMPAGRO-1.jpg',
-      link: '/productos#transporte',
+      link: '/productos#horticultura',
       productId: 'prod-03',
     },
     {
       name: 'Otros Productos',
       description: 'Sistemas de almacenamiento diseñados para preservar la calidad de sus productos por más tiempo.',
       image: 'https://raw.githubusercontent.com/Andrestorales7/image-assets/refs/heads/main/images/otros/precintos/precinto-indicativo.jpg',
-      link: '/productos#almacenamiento',
+      link: '/productos#otros',
       productId: 'prod-04',
     },
   ];
