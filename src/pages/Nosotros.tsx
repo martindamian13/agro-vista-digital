@@ -96,7 +96,7 @@ const Nosotros = () => {
           <div 
             className="absolute inset-0 z-0 bg-center bg-cover" 
             style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1438565434616-3ef039228b15?ixlib=rb-4.0.3')",
+              backgroundImage: "url('https://vimeo.com/994813569?share=copy')",
               backgroundPosition: 'center',
             }}
           >
