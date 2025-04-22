@@ -7,35 +7,22 @@ Este documento detalla los puntos tratados en la reunión con el cliente. Se agr
 
 ## 🧱 Estructura y Contenido General
 
-### 1. CMP (Componente Principal)
-- [ ] Añadir detalles informativos.
-- [ ] Incluir imágenes relevantes del CMP.
-- [ ] Incorporar fragmentos de video para mostrar el avance visual.
-- [ ] Agregar video en loop del sector de productos.
-
-### 2. Tablas de Clientes
-- [ ] Implementar **tres tablas** diferenciadas de clientes.
-
-### 3. Segmentación y Categorías
-- [ ] Crear segmentación por **categoría**.
-- [ ] Clasificación de contenido por **sector productivo**.
-- [ ] Asociar:
-  - [ ] Testimonios.
-  - [ ] Contacto directo.
-  - [ ] Orden de asesor.
-
-### 4. Sección de Marcas / Partnerships
+### 1. Sección de Marcas / Partnerships
 - [ ] Mostrar **marcas de partnership**.
 - [ ] Decidir ubicación: `arriba` o `abajo` del sector de categorías.
 - [ ] Diferenciar visualmente:
   - [ ] Logos de **marcas de productos**.
   - [ ] Logos de **marcas de clientes**.
 
+### 2. Inicio de la pagina
+- [ ] Mostrar las categorias con un slider
+- [ ] Mostrar los testimonios con slider en mobile
+- [ ] Separar las secciones usando colores de fondo distintos
 ---
 
 ## 🧹 Limpieza y Ajustes Visuales
 
-### 5. Eliminación de elementos anteriores
+### 3. Eliminación de elementos anteriores
 - [ ] Suprimir la sección **"Contáctenos"**.
 - [ ] Eliminar el **footer** de la página anterior.
 
@@ -43,11 +30,13 @@ Este documento detalla los puntos tratados en la reunión con el cliente. Se agr
 
 ## 📲 Funcionalidades Adicionales
 
-### 6. Contacto Directo
+### 4. Contacto Directo
 - [ ] Integrar globo flotante de **WhatsApp**.
 
-### 7. Tracking y Analytics
+### 5. Tracking y Analytics
 - [ ] Agregar **Meta Pixel** para seguimiento.
+
+
 
 ---
 

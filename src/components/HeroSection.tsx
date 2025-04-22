@@ -1,41 +1,38 @@
+import React from 'react';
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
 
-import { Link } from 'react-router-dom';
-
-const HeroSection = () => {
-  return (
-    <div className="relative bg-gray-900 overflow-hidden">
-      {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 z-0 bg-center bg-cover" 
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3')",
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 py-24 md:py-32 lg:py-40 relative z-10">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            CMP AGRO - Soluciones para el campo
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Distribución de productos y servicios especializados para 
-            agricultores y ganaderos, con un compromiso con la calidad y el medio ambiente.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/productos" className="bg-cmp-red hover:bg-cmp-red/90 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300 text-center">
-              Ver productos
-            </Link>
-            <Link to="/contacto" className="bg-cmp-blue text-white hover:bg-cmp-blue/90 font-medium px-6 py-3 rounded-md transition-colors duration-300 text-center">
-              Contactar ahora
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const Hero: React.FC = () => {
+    return (
+        <section
+            className="w-full py-9 px-8"
+            style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        >
+            <div className="mx-auto flex flex-col lg:flex-row justify-between items-center gap-10 py-20 max-w-[1440px]">
+                <div className="max-w-[660px] flex-col justify-center items-start gap-10 flex">
+                    <div className="flex-col justify-start items-start gap-5 flex">
+                        <h1 className="text-white text-5xl font-bold font-['Roboto'] leading-tight">
+                            <span>Revolutionizing Agriculture: </span>
+                            <span className="text-[#3e9d26]">Sustainable Solutions for the Future</span>
+                        </h1>
+                        <p className="text-white text-xl font-normal font-['Roboto']">
+                            From precision farming to eco-friendly innovations, discover how we’re changing the way the world grows its food.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-5">
+                        <p className="text-white text-sm font-normal font-['Roboto']">Grow with Us</p>
+                        <button className="px-8 py-2.5 bg-[#3e9d26] rounded-[10px] text-white text-sm font-semibold font-['Roboto']">
+                            Explore Solutions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };
 
-export default HeroSection;
+export default Hero;
