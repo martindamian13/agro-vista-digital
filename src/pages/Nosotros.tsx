@@ -100,7 +100,7 @@ const Nosotros = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="absolute inset-0 bg-agro-green-dark"></div>
           </div>
           
           <div className="container mx-auto px-4 py-24 relative z-10 text-center">

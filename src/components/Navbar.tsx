@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
-                        <a className="block" href="#">
+                        <a className="block" href="/">
                             <span className="sr-only">Home</span>
                             <div className="flex items-center space-x-2">
                                 <img 
@@ -52,13 +52,8 @@ const Navbar: React.FC = () => {
                         <nav aria-label="Global" className="hidden md:block">
                             <ul className="flex items-center gap-8 text-sm">
                                 <li>
-                                    <a className="hover:text-teal-600 transition-colors font-medium" href="#">
+                                    <a className="hover:text-teal-600 transition-colors font-medium" href="/">
                                         Inicio
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="hover:text-teal-600 transition-colors font-medium" href="#">
-                                        Soluciones
                                     </a>
                                 </li>
 
@@ -73,7 +68,7 @@ const Navbar: React.FC = () => {
                                         {productSubcategories.map((subcategory) => (
                                             <a
                                                 key={subcategory}
-                                                href="#"
+                                                href="/productos"
                                                 className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-teal-600"
                                             >
                                                 {subcategory}
@@ -83,13 +78,14 @@ const Navbar: React.FC = () => {
                                 </li>
 
                                 <li>
-                                    <a className="hover:text-teal-600 transition-colors font-medium" href="#">
-                                        Nosotros
+                                    <a className="hover:text-teal-600 transition-colors font-medium" href="/noticias">
+                                        Noticias
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a className="hover:text-teal-600 transition-colors font-medium" href="#">
-                                        Blog
+                                    <a className="hover:text-teal-600 transition-colors font-medium" href="/nosotros">
+                                        Nosotros
                                     </a>
                                 </li>
                             </ul>
@@ -99,7 +95,7 @@ const Navbar: React.FC = () => {
                             <div className="sm:flex sm:gap-4">
                                 <a
                                     className="rounded-md bg-teal-600 px-6 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 transition-colors"
-                                    href="#"
+                                    href="/contacto"
                                 >
                                     Contacto
                                 </a>

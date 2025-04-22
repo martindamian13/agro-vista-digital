@@ -76,12 +76,12 @@ const Noticias = () => {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <div className="relative bg-agro-green-dark py-20">
-          <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+        <div className="relative bg-agro-green-dark py-24">
+          <div className="container mx-auto px-4 relative z-10 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Noticias y Actualidad
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Manténgase informado sobre las últimas novedades del sector agropecuario y ganadero.
             </p>
           </div>
