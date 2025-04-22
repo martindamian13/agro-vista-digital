@@ -65,7 +65,7 @@ const ProductsSection = () => {
             </div>
             <CardContent className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                <Link to={`/productos#${category.id}`} className="hover:text-cmp-green transition-colors">
+                <Link to={`/productos#${category.id}`} className="hover: bg-agro-green-dark transition-colors">
                   {category.name}
                 </Link>
               </h3>

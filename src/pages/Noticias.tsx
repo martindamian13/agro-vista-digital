@@ -1,4 +1,3 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Calendar, Search } from 'lucide-react';
@@ -73,51 +72,61 @@ const Noticias = () => {
   const categories = [...new Set(newsItems.map(item => item.category))];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <div className="relative bg-agro-green-dark py-16">
+        <div className="relative bg-agro-green-dark py-20">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Noticias y Actualidad</h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+              Noticias y Actualidad
+            </h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
               Manténgase informado sobre las últimas novedades del sector agropecuario y ganadero.
             </p>
           </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-agro-green-dark to-agro-green opacity-30"></div>
         </div>
         
         {/* Search and Filters */}
-        <div className="bg-agro-gray-light py-8">
+        <div className="bg-white py-12 shadow-md">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="w-full md:w-1/2 mb-4 md:mb-0">
+            <div className="grid grid-cols-1 gap-6">
+              {/* Search Bar */}
+              <div>
                 <div className="relative">
                   <input
                     type="text"
                     placeholder="Buscar noticias..."
-                    className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:ring-agro-green focus:border-agro-green"
+                    className="w-full pl-12 pr-6 py-3 rounded-full border-gray-300 focus:ring-agro-green focus:border-agro-green text-gray-700"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search className="text-gray-400 h-6 w-6" />
+                  </div>
                 </div>
               </div>
-              
-              <div className="w-full md:w-auto flex flex-wrap gap-2">
-                <button 
-                  className={`px-4 py-1 rounded-full text-sm font-medium ${
-                    searchTerm === '' ? 'bg-agro-green text-white' : 'bg-white text-gray-700 hover:bg-agro-green-light/20'
+
+              {/* Category Filters */}
+              <div className="flex flex-wrap items-center justify-start gap-3">
+                <button
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                    searchTerm === ''
+                      ? 'bg-agro-green text-white hover:bg-agro-green-dark'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                   onClick={() => setSearchTerm('')}
                 >
                   Todos
                 </button>
-                
-                {categories.map(category => (
-                  <button 
+                {categories.map((category) => (
+                  <button
                     key={category}
-                    className={`px-4 py-1 rounded-full text-sm font-medium ${
-                      searchTerm === category ? 'bg-agro-green text-white' : 'bg-white text-gray-700 hover:bg-agro-green-light/20'
+                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                      searchTerm === category
+                        ? 'bg-agro-green text-white hover:bg-agro-green-dark'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                     onClick={() => setSearchTerm(category)}
                   >
@@ -137,30 +146,30 @@ const Noticias = () => {
                 {filteredNews.map((item) => (
                   <div 
                     key={item.id} 
-                    className="bg-white rounded-lg overflow-hidden shadow-md card-hover"
+                    className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
-                    <div className=" overflow-hidden">
+                    <div className="overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
                     <div className="p-6">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium px-3 py-1 bg-agro-green-light/20 text-agro-green-dark rounded-full">
+                      <div className="flex justify-between items-center mb-4">
+                        <span className="text-sm font-medium px-4 py-2 bg-agro-green-light/20 text-agro-green-dark rounded-full">
                           {item.category}
                         </span>
                         <div className="flex items-center text-gray-500 text-sm">
-                          <Calendar className="h-4 w-4 mr-1" />
+                          <Calendar className="h-5 w-5 mr-2" />
                           {item.date}
                         </div>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                      <h3 className="text-xl font-semibold mb-3 text-gray-800 hover:text-agro-green transition-colors duration-200">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                      <button className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center">
+                      <p className="text-gray-600 mb-4 leading-relaxed">{item.excerpt}</p>
+                      <button className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center transition-colors duration-200">
                         Leer más
                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -199,7 +208,7 @@ const Noticias = () => {
                 <input
                   type="email"
                   placeholder="Su correo electrónico"
-                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-agro-earth focus:border-agro-earth"
+                  className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-agro-earth focus:border-agro-earth"
                 />
                 <button className="btn-secondary sm:whitespace-nowrap">
                   Suscribirse

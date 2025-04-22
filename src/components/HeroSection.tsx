@@ -1,76 +1,38 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
 
-const HeroSection = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 6500); // 6 seconds delay
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className="relative bg-gray-900 overflow-hidden h-screen max-h-[800px]">
-      {/* Video Background with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
+const Hero: React.FC = () => {
+    return (
+        <section
+            className="w-full py-9 px-8"
+            style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
         >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-        {showContent && (
-          <div className="text-center w-full">
-            {/* Main Title with Animation */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in">
-              CMP AGRO
-            </h1>
-            
-            {/* Slogan with Beautiful Typography */}
-            <div className="mb-8">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-light text-white italic mb-2 animate-fade-in [animation-delay:200ms]">
-                "Cultivando el futuro"
-              </p>
-              <div className="w-24 h-1 bg-cmp-red mx-auto my-4 animate-grow [animation-delay:400ms]"></div>
+            <div className="mx-auto flex flex-col lg:flex-row justify-between items-center gap-10 py-20 max-w-[1440px]">
+                <div className="max-w-[660px] flex-col justify-center items-start gap-10 flex">
+                    <div className="flex-col justify-start items-start gap-5 flex">
+                        <h1 className="text-white text-5xl font-bold font-['Roboto'] leading-tight">
+                            <span>Revolutionizing Agriculture: </span>
+                            <span className="text-[#3e9d26]">Sustainable Solutions for the Future</span>
+                        </h1>
+                        <p className="text-white text-xl font-normal font-['Roboto']">
+                            From precision farming to eco-friendly innovations, discover how we’re changing the way the world grows its food.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-5">
+                        <p className="text-white text-sm font-normal font-['Roboto']">Grow with Us</p>
+                        <button className="px-8 py-2.5 bg-[#3e9d26] rounded-[10px] text-white text-sm font-semibold font-['Roboto']">
+                            Explore Solutions
+                        </button>
+                    </div>
+                </div>
             </div>
-            
-            {/* Description with Better Readability */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-8 animate-fade-in [animation-delay:600ms]">
-              Distribución de productos y servicios especializados para 
-              agricultores y ganaderos, con compromiso de calidad y medio ambiente.
-            </p>
-            
-            {/* CTA Buttons - Centered and Responsive */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in [animation-delay:800ms]">
-              <Link 
-                to="/productos" 
-                className="bg-cmp-red hover:bg-cmp-red/90 text-white font-medium px-6 py-3 rounded-md transition-all duration-300 hover:scale-105"
-              >
-                Nuestros Productos
-              </Link>
-              <Link 
-                to="/contacto" 
-                className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition-all duration-300 hover:scale-105"
-              >
-                Contacto
-              </Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+        </section>
+    );
 };
 
-export default HeroSection;
+export default Hero;
