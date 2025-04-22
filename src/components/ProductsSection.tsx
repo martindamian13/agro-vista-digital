@@ -1,7 +1,14 @@
-
 import { Link } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useIsMobile } from '@/hooks/use-mobile';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Category {
   id: string;
@@ -11,6 +18,8 @@ interface Category {
 }
 
 const ProductsSection = () => {
+  const isMobile = useIsMobile();
+
   const categories: Category[] = [
     {
       id: 'forraje',
@@ -48,49 +57,98 @@ const ProductsSection = () => {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {categories.map((category) => (
-          <Card 
-            key={category.id} 
-            className="bg-white rounded-lg overflow-hidden shadow-md card-hover flex flex-col"
-          >
-            <div className="h-48 overflow-hidden">
-              <Link to={`/productos#${category.id}`}>
-                <img 
-                  src={category.image} 
-                  alt={category.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </Link>
-            </div>
-            <CardContent className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                <Link to={`/productos#${category.id}`} className="hover:text-cmp-green transition-colors">
-                  {category.name}
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
-              <div className="flex justify-between items-center">
-                <Link 
-                  to={`/productos#${category.id}`} 
-                  className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center"
-                >
-                  Ver categoría
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </Link>
-                <Link 
-                  to={`/productos#${category.id}`}
-                  className="text-cmp-blue hover:text-cmp-blue-dark font-medium"
-                >
-                  Ver productos
+      {isMobile ? (
+        <Carousel className="w-full max-w-xs mx-auto">
+          <CarouselContent>
+            {categories.map((category) => (
+              <CarouselItem key={category.id}>
+                <Card className="bg-white rounded-lg overflow-hidden shadow-md card-hover flex flex-col">
+                  <div className="h-48 overflow-hidden">
+                    <Link to={`/productos#${category.id}`}>
+                      <img 
+                        src={category.image} 
+                        alt={category.name} 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </Link>
+                  </div>
+                  <CardContent className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                      <Link to={`/productos#${category.id}`} className="hover:text-cmp-green transition-colors">
+                        {category.name}
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
+                    <div className="flex justify-between items-center">
+                      <Link 
+                        to={`/productos#${category.id}`} 
+                        className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center"
+                      >
+                        Ver categoría
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                      </Link>
+                      <Link 
+                        to={`/productos#${category.id}`}
+                        className="text-cmp-blue hover:text-cmp-blue-dark font-medium"
+                      >
+                        Ver productos
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {categories.map((category) => (
+            <Card 
+              key={category.id} 
+              className="bg-white rounded-lg overflow-hidden shadow-md card-hover flex flex-col"
+            >
+              <div className="h-48 overflow-hidden">
+                <Link to={`/productos#${category.id}`}>
+                  <img 
+                    src={category.image} 
+                    alt={category.name} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
                 </Link>
               </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                  <Link to={`/productos#${category.id}`} className="hover:text-cmp-green transition-colors">
+                    {category.name}
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
+                <div className="flex justify-between items-center">
+                  <Link 
+                    to={`/productos#${category.id}`} 
+                    className="text-agro-green hover:text-agro-green-dark font-medium inline-flex items-center"
+                  >
+                    Ver categoría
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </Link>
+                  <Link 
+                    to={`/productos#${category.id}`}
+                    className="text-cmp-blue hover:text-cmp-blue-dark font-medium"
+                  >
+                    Ver productos
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
       
       <div className="mt-12 text-center">
         <Link to="/productos" className="btn-secondary inline-flex items-center">

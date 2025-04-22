@@ -1,8 +1,17 @@
-
 import { Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useIsMobile } from '@/hooks/use-mobile';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const TestimonialSection = () => {
+  const isMobile = useIsMobile();
+  
   const testimonials = [
     {
       id: 1,
@@ -34,35 +43,73 @@ const TestimonialSection = () => {
           <h2 className="section-title">Lo que dicen nuestros clientes</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="h-full bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-8 relative">
-                <div className="absolute -top-4 left-6 text-agro-green">
-                  <Quote className="h-10 w-10" />
-                </div>
-                
-                <div className="pt-6">
-                  <p className="text-base text-gray-700 mb-6 italic">
-                    "{testimonial.text}"
-                  </p>
+        {isMobile ? (
+          <Carousel className="w-full max-w-xs mx-auto">
+            <CarouselContent>
+              {testimonials.map((testimonial) => (
+                <CarouselItem key={testimonial.id}>
+                  <Card className="h-full bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <CardContent className="p-8 relative">
+                      <div className="absolute -top-4 left-6 text-agro-green">
+                        <Quote className="h-10 w-10" />
+                      </div>
+                      
+                      <div className="pt-6">
+                        <p className="text-base text-gray-700 mb-6 italic">
+                          "{testimonial.text}"
+                        </p>
+                        
+                        <div className="flex items-center">
+                          <img
+                            src={testimonial.image}
+                            alt={testimonial.author}
+                            className="h-12 w-12 rounded-full object-cover mr-4"
+                          />
+                          <div>
+                            <p className="font-semibold text-gray-800">{testimonial.author}</p>
+                            <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial) => (
+              <Card key={testimonial.id} className="h-full bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-8 relative">
+                  <div className="absolute -top-4 left-6 text-agro-green">
+                    <Quote className="h-10 w-10" />
+                  </div>
                   
-                  <div className="flex items-center">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      className="h-12 w-12 rounded-full object-cover mr-4"
-                    />
-                    <div>
-                      <p className="font-semibold text-gray-800">{testimonial.author}</p>
-                      <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                  <div className="pt-6">
+                    <p className="text-base text-gray-700 mb-6 italic">
+                      "{testimonial.text}"
+                    </p>
+                    
+                    <div className="flex items-center">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="h-12 w-12 rounded-full object-cover mr-4"
+                      />
+                      <div>
+                        <p className="font-semibold text-gray-800">{testimonial.author}</p>
+                        <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
