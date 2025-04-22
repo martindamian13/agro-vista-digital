@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
                             <span className="sr-only">Home</span>
                             <div className="flex items-center space-x-2">
                                 <img 
-                                    src="/lovable-uploads/logo2.png" 
+                                    src="/lovable-uploads/logo1.png" 
                                     alt="Company Logo" 
                                     className="h-14 w-auto object-contain" 
                                 />
