@@ -19,12 +19,12 @@ const Noticias = () => {
     },
     {
       id: 2,
-      title: 'Media Sombra',
-      excerpt: 'CMP agro revoluciona el mercado con nuevas media sombras.',
+      title: 'Malla CTA',
+      excerpt: 'La Solucion #1 para reducir la temperatura en corrales y establos con la innovadora tecnologia Israeli.',
       content: 'Investigadores han desarrollado nuevas fórmulas alimenticias que pueden aumentar la producción de leche en un 15% y mejorar la conversión alimenticia en ganado de carne. Estas dietas incorporan probióticos específicos para rumiantes que optimizan la flora ruminal, mejorando la digestión y reduciendo la producción de metano. También incluyen combinaciones precisas de minerales orgánicos que mejoran la inmunidad y reducen los problemas reproductivos. Los ganaderos que han implementado estos avances reportan no solo mejor productividad, sino también una reducción en los costos veterinarios.',
       date: '05 abril, 2025',
       category: 'Ganadería',
-      image: 'https://cdn.app-sorteos.workers.dev/https://instagram.fasu4-1.fna.fbcdn.net/v/t51.2885-15/469748818_18042389327514665_5015443759900096491_n.jpg?stp=dst-jpg_e35_tt6&cb=30a688f7-fa102a98&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTA4MC5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fasu4-1.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QERNrfbYWfXT48_oVUaSjdnk8uMEqL88RqWr2k2tuWRISDb0Aq-5LaPQawfmYNtOck&_nc_ohc=mmtf7GY_Sd4Q7kNvwHZyPXb&_nc_gid=SH8O5lZQ0nltBpt30889QQ&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MzUyMjIzODU3ODUyNDc3NDAyNA%3D%3D.3-ccb7-5-cb30a688f7-fa102a98&oh=00_AfEmE2uUfQsTRJbqc5Ifitxvm_RvcT1EO2JIjwnqJ7UxVA&oe=6803471C&_nc_sid=fc8dfb',
+      image: 'https://cdn.app-sorteos.workers.dev/https://instagram.fasu4-1.fna.fbcdn.net/v/t51.2885-15/477324110_18049339412514665_2391922610987125770_n.jpg?stp=dst-jpg_e35_tt6&cb=30a688f7-fa102a98&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTM1MC5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fasu4-1.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QHbgEOFY-N6h6xPj8GpgGsCZU7D6AX8uyMF0SgqwEKxx6tjWXwFkTRTucPnk1OYD6M&_nc_ohc=A68b6egumwoQ7kNvwHHUNuO&_nc_gid=a9qs5MckmW7v7gSGp9VQYA&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MzU2NjU4ODY3NTE0ODI5Mjk2MA%3D%3D.3-ccb7-5-cb30a688f7-fa102a98&oh=00_AfFtDDXKzy13RWz2dXJbkYKa96wr7KzvVaTxQqvBL2_VsA&oe=6804B28A&_nc_sid=fc8dfb',
     },
     {
       id: 3,
@@ -139,9 +139,9 @@ const Noticias = () => {
                     key={item.id} 
                     className="bg-white rounded-lg overflow-hidden shadow-md card-hover"
                   >
-                    <div className=" overflow-hidden">
+                    <div className="h-75 overflow-hidden">
                       <img 
-                        src={item.image} 
+                        src={item.image || '/api/placeholder/400/320'} 
                         alt={item.title} 
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
