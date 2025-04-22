@@ -14,7 +14,7 @@ const Noticias = () => {
       content: 'La gestión eficiente del agua es uno de los mayores desafíos para la agricultura moderna. Los nuevos sistemas de riego por goteo inteligentes permiten reducir el consumo de agua hasta en un 30% mientras mantienen o mejoran el rendimiento de los cultivos. Estos sistemas utilizan sensores de humedad del suelo y datos meteorológicos para ajustar automáticamente la cantidad de agua aplicada, evitando tanto el exceso como la escasez de riego. Además, facilitan la fertirrigación precisa, aplicando los nutrientes exactamente donde y cuando las plantas los necesitan.',
       date: '25 Marzo, 2025',
       category: 'Innovación',
-      image: 'https://cdn.app-sorteos.workers.dev/https://instagram.fasu4-1.fna.fbcdn.net/v/t51.2885-15/486220579_18053816954514665_204133777185950089_n.jpg?stp=dst-jpg_e35_tt6&cb=30a688f7-fa102a98&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTM1MC5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fasu4-1.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QGDqTKfcw39ReEXz3HniXzHdEKwgITg5mst5rrLTZ1o6kyTPdtVn6GU0wFgrtfhta0&_nc_ohc=Q5BB4Au4v3YQ7kNvwHCTmjE&_nc_gid=IIlhW9svBpfsHe9Ih6b0XA&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MzU5NTU5NDk5MTY0NDY5NjEzOA%3D%3D.3-ccb7-5-cb30a688f7-fa102a98&oh=00_AfGFokRY4WNcnErI1dJ2Fb2640kosjynP4YdL-xaMtHDPg&oe=67FF2C4B&_nc_sid=fc8dfb',
+      image: '/images/news1.jpg',
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Noticias = () => {
       content: 'Investigadores han desarrollado nuevas fórmulas alimenticias que pueden aumentar la producción de leche en un 15% y mejorar la conversión alimenticia en ganado de carne. Estas dietas incorporan probióticos específicos para rumiantes que optimizan la flora ruminal, mejorando la digestión y reduciendo la producción de metano. También incluyen combinaciones precisas de minerales orgánicos que mejoran la inmunidad y reducen los problemas reproductivos. Los ganaderos que han implementado estos avances reportan no solo mejor productividad, sino también una reducción en los costos veterinarios.',
       date: '05 abril, 2025',
       category: 'Ganadería',
-      image: 'https://cdn.app-sorteos.workers.dev/https://instagram.fasu4-1.fna.fbcdn.net/v/t51.2885-15/477324110_18049339412514665_2391922610987125770_n.jpg?stp=dst-jpg_e35_tt6&cb=30a688f7-fa102a98&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTM1MC5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fasu4-1.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QHbgEOFY-N6h6xPj8GpgGsCZU7D6AX8uyMF0SgqwEKxx6tjWXwFkTRTucPnk1OYD6M&_nc_ohc=A68b6egumwoQ7kNvwHHUNuO&_nc_gid=a9qs5MckmW7v7gSGp9VQYA&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MzU2NjU4ODY3NTE0ODI5Mjk2MA%3D%3D.3-ccb7-5-cb30a688f7-fa102a98&oh=00_AfFtDDXKzy13RWz2dXJbkYKa96wr7KzvVaTxQqvBL2_VsA&oe=6804B28A&_nc_sid=fc8dfb',
+      image: '/images/news2.png',
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const Noticias = () => {
       content: 'Del 15 al 18 de mayo, la ciudad de Madrid acogerá la Feria Internacional Agropecuaria 2025, el evento más importante del sector en Europa. AgroVista Digital participará con un stand en el pabellón 7, donde presentaremos nuestras últimas novedades en fertilizantes ecológicos y sistemas de monitoreo de cultivos. Los visitantes podrán participar en demostraciones prácticas y consultar con nuestros especialistas sobre soluciones personalizadas. Además, ofreceremos condiciones especiales para pedidos realizados durante la feria. ¡Le esperamos!',
       date: '28 marzo, 2025',
       category: 'Eventos',
-      image: 'https://cdn.app-sorteos.workers.dev/https://instagram.fasu4-1.fna.fbcdn.net/v/t51.2885-15/476086004_18048430181514665_7394206720860457408_n.jpg?stp=dst-jpg_e35_tt6&cb=30a688f7-fa102a98&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTM1MC5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fasu4-1.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QF9_dXwB_KS1oZtIlu4oSl579F016AsOjXpwwhXrq885wupTCOjAgIjrbI4jfLk4MU&_nc_ohc=_1Lr_lvwhM0Q7kNvwFEuczR&_nc_gid=9i5zDh2ccYVqqYyMniCSIQ&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MzU2MDU4ODMxNzIxOTM4NzYxNg%3D%3D.3-ccb7-5-cb30a688f7-fa102a98&oh=00_AfEiKf2aMILbu6eKIIkzqQCYhStUJX30nl1JArNgqUEbAQ&oe=68034285&_nc_sid=fc8dfb',
+      image: '/images/news3.png',
     },
     {
       id: 4,
