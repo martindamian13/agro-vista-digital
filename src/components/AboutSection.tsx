@@ -1,4 +1,3 @@
-
 import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -14,7 +13,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="container-section">
+    <section id="nosotrosSect" className="container-section">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex justify-center">
           <div className="rounded-lg overflow-hidden relative w-3/4 mx-auto">

@@ -15,11 +15,18 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
+        <NoticeSlider
+        speed={30}
+        notices={[
+          { id: 1, text: '🌱 New Organic Fertilizer Line Now Available!' },
+          { id: 2, text: '🚜 Harvest Festival: October 15-20, 2024' },
+          { id: 3, text: '📢 20% Discount on Seasonal Seeds - Limited Time!' },
+        ]} />
         <ProductsSection />
         <NewsSection />
         <AboutSection />
         <TestimonialSection />
-        <ContactSection />
+        <Marcas />
       </main>
       <Footer />
     </div>

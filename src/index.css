@@ -89,6 +89,10 @@
     @apply border-border;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
@@ -125,7 +129,7 @@
 
   .marcas-container {
     text-align: center;
-    padding: 20px;
+    padding: 10px; /* Reducir el padding */
   }
 
   .marcas-carousel {
@@ -135,9 +139,9 @@
   }
 
   .marca-tarjeta {
-    flex: 0 0 100%; /* Cada tarjeta ocupa el 100% del ancho del contenedor */
-    width: 100%;
-    padding: 10px;
+    flex: 0 0 80%; /* Reducir el ancho relativo de cada tarjeta */
+    width: 40%; /* Ajustar el ancho */
+    padding: 5px; /* Reducir el padding interno */
     border: 1px solid #ccc;
     box-sizing: border-box;
     transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -162,18 +161,29 @@ const Productos = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      {/* Navbar */}
+      <div className="absolute top-0 left-0 w-full z-10">
+        <Navbar />
+      </div>
+
       <main className="flex-grow">
         {/* Hero Section */}
-        <div className="relative bg-agro-green-dark py-24">
-          <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestros Productos</h1>
-            <p className="text-xl max-w-3xl mx-auto">
-              Descubra nuestra amplia gama de productos de calidad para el sector agropecuario y ganadero.
-            </p>
+        <div 
+          className="relative bg-cover bg-center bg-no-repeat py-32 text-white" 
+          style={{
+            backgroundImage: `url('/images/header2.jpg')`, // Cambia esta URL por la imagen que desees
+            backgroundPosition: 'center center', // Asegura que la imagen esté centrada
+            backgroundSize: 'cover', // Asegura que la imagen cubra todo el contenedor
+            filter: 'brightness(0.7)', // Aplica un filtro oscuro para mejorar el contraste
+          }}
+        >
+          <div className="absolute inset-0 bg-black/30"></div> {/* Filtro adicional */}
+          <div className="relative z-10 text-center">
+            <h1 className="text-4xl font-bold">Nuestros Productos</h1>
+            <p className="mt-4 text-lg">Encuentra las mejores soluciones para tus necesidades agrícolas</p>
           </div>
         </div>
-        
+
         <div className="container mx-auto px-4 py-10">
           {/* Breadcrumbs */}
           <div className="mb-8">
@@ -206,8 +216,8 @@ const Productos = () => {
             </nav>
           </div>
 
+          {/* Resto del contenido */}
           {selectedCategory === null ? (
-            // Categories View
             <>
               <h2 className="text-3xl font-bold text-cmp-blue mb-8">Categorías de Productos</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -239,9 +249,9 @@ const Productos = () => {
               </div>
             </>
           ) : (
-            // Products within selected category
             selectedCategoryData && (
               <>
+                {/* Productos de la categoría seleccionada */}
                 <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between">
                   <div>
                     <button 
