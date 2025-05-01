@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                                 </li>
 
                                 <li>
-                                    <a className="hover:text-green-700 transition-colors font-medium" href="#nosotros">
+                                    <a className="hover:text-green-700 transition-colors font-medium" href="#nosotrosSect">
                                         Nosotros
                                     </a>
                                 </li>

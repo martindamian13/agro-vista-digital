@@ -23,10 +23,9 @@ const Index = () => {
           { id: 3, text: '📢 20% Discount on Seasonal Seeds - Limited Time!' },
         ]} />
         <ProductsSection />
-        <NewsSection />
-        <AboutSection />
-        <TestimonialSection />
         <Marcas />
+        <AboutSection />
+        
       </main>
       <Footer />
     </div>

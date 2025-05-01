@@ -171,7 +171,7 @@ const Productos = () => {
         <div 
           className="relative bg-cover bg-center bg-no-repeat py-32 text-white" 
           style={{
-            backgroundImage: `url('/images/header2.jpg')`, // Cambia esta URL por la imagen que desees
+            backgroundImage: `url('https://images.unsplash.com/photo-1744230673231-865d54a0aba4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`, // Cambia esta URL por la imagen que desees
             backgroundPosition: 'center center', // Asegura que la imagen esté centrada
             backgroundSize: 'cover', // Asegura que la imagen cubra todo el contenedor
             filter: 'brightness(0.7)', // Aplica un filtro oscuro para mejorar el contraste
